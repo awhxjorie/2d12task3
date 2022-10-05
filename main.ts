@@ -1,3 +1,4 @@
+let count = 0
 input.onButtonPressed(Button.A, function () {
     basic.showNumber(1)
     basic.pause(200)
@@ -12,5 +13,10 @@ input.onButtonPressed(Button.A, function () {
     basic.showNumber(6)
 })
 input.onButtonPressed(Button.B, function () {
-    basic.clearScreen()
+    count = 9
+    for (let index = 0; index < 10; index++) {
+        basic.showNumber(count)
+        basic.pause(200)
+        count += -1
+    }
 })
